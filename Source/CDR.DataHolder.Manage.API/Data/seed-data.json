@@ -25,6 +25,26 @@
                     "MaskedName": "xxx-xxx xxxxx455",
                     "ProductCategory": "TRANS_AND_SAVINGS_ACCOUNTS",
                     "ProductName": "Everyday Savings",
+                    "Balance": {
+                        "BalanceId": "BID1122334455",
+                        "CurrentBalance": 1000.0,
+                        "AvailableBalance": 100.0,
+                        "CreditLimit": 10.0,
+                        "AmortisedLimit": 10.0,
+                        "Currency": "AUD",
+                        "Purses" : [
+                            {
+                                "BankingBalancePurseId": "BBPID11223344551",
+                                "Amount": 111.1,
+                                "Currency": "AUD"
+                            },
+                            {
+                                "BankingBalancePurseId": "BBPID11223344552",
+                                "Amount": 222.2,
+                                "Currency": "AUD"
+                            }
+                        ]
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN12345",
@@ -145,6 +165,15 @@
                     "MaskedName": "xxx-xxx xxxxx987",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID98765987",
+                        "CurrentBalance": 2000.0,
+                        "AvailableBalance": 200.0,
+                        "CreditLimit": 20.0,
+                        "AmortisedLimit": 2.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-100",
@@ -175,6 +204,15 @@
                     "MaskedName": "xxx-xxx xxxxx988",
                     "ProductCategory": "TRANS_AND_SAVINGS_ACCOUNTS",
                     "ProductName": "Everyday Transactions",
+                    "Balance": {
+                        "BalanceId": "BID98765988",
+                        "CurrentBalance": 3000.0,
+                        "AvailableBalance": 30.0,
+                        "CreditLimit": 30.0,
+                        "AmortisedLimit": 3.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN001",
@@ -745,6 +783,15 @@
                     "MaskedName": "xxx-xxx xxxxx232",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID1235782",
+                        "CurrentBalance": 4000.0,
+                        "AvailableBalance": 40.0,
+                        "CreditLimit": 40.0,
+                        "AmortisedLimit": 4.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-101",
@@ -793,6 +840,15 @@
                     "MaskedName": "xxx-xxx xxxxx001",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID0000001",
+                        "CurrentBalance": 5000.0,
+                        "AvailableBalance": 50.0,
+                        "CreditLimit": 50.0,
+                        "AmortisedLimit": 5.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-102",
@@ -823,6 +879,15 @@
                     "MaskedName": "xxx-xxx xxxxx002",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID0000002",
+                        "CurrentBalance": 6000.0,
+                        "AvailableBalance": 600.0,
+                        "CreditLimit": 60.0,
+                        "AmortisedLimit": 6.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-103",
@@ -853,6 +918,15 @@
                     "MaskedName": "xxx-xxx xxxxx003",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID0000003",
+                        "CurrentBalance": 7000.0,
+                        "AvailableBalance": 700.0,
+                        "CreditLimit": 70.0,
+                        "AmortisedLimit": 7.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-104",
@@ -883,6 +957,15 @@
                     "MaskedName": "xxx-xxx xxxxx004",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID0000004",
+                        "CurrentBalance": 8000.0,
+                        "AvailableBalance": 800.0,
+                        "CreditLimit": 80.0,
+                        "AmortisedLimit": 8.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-105",
@@ -913,6 +996,15 @@
                     "MaskedName": "xxx-xxx xxxxx005",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID0000005",
+                        "CurrentBalance": 9000.0,
+                        "AvailableBalance": 900.0,
+                        "CreditLimit": 90.0,
+                        "AmortisedLimit": 9.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-106",
@@ -943,6 +1035,15 @@
                     "MaskedName": "xxx-xxx xxxxx006",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID0000006",
+                        "CurrentBalance": 10000.0,
+                        "AvailableBalance": 1000.0,
+                        "CreditLimit": 100.0,
+                        "AmortisedLimit": 10.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-107",
@@ -973,6 +1074,15 @@
                     "MaskedName": "xxx-xxx xxxxx007",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID0000007",
+                        "CurrentBalance": 11000.0,
+                        "AvailableBalance": 1100.0,
+                        "CreditLimit": 110.0,
+                        "AmortisedLimit": 11.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-108",
@@ -1003,6 +1113,15 @@
                     "MaskedName": "xxx-xxx xxxxx008",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID0000008",
+                        "CurrentBalance": 12000.0,
+                        "AvailableBalance": 1200.0,
+                        "CreditLimit": 120.0,
+                        "AmortisedLimit": 12.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-109",
@@ -1033,6 +1152,15 @@
                     "MaskedName": "xxx-xxx xxxxx009",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID0000009",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-110",
@@ -1063,6 +1191,15 @@
                     "MaskedName": "xxx-xxx xxxxx010",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID0000010",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-111",
@@ -1093,6 +1230,15 @@
                     "MaskedName": "xxx-xxx xxxxx001",
                     "ProductCategory": "TRANS_AND_SAVINGS_ACCOUNTS",
                     "ProductName": "Everyday Savings",
+                    "Balance": {
+                        "BalanceId": "BID1000001",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-112",
@@ -1123,6 +1269,15 @@
                     "MaskedName": "xxx-xxx xxxxx002",
                     "ProductCategory": "TRANS_AND_SAVINGS_ACCOUNTS",
                     "ProductName": "Everyday Savings",
+                    "Balance": {
+                        "BalanceId": "BID1000002",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-113",
@@ -1153,6 +1308,15 @@
                     "MaskedName": "xxx-xxx xxxxx003",
                     "ProductCategory": "TRANS_AND_SAVINGS_ACCOUNTS",
                     "ProductName": "Everyday Savings",
+                    "Balance": {
+                        "BalanceId": "BID1000003",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-114",
@@ -1183,6 +1347,15 @@
                     "MaskedName": "xxx-xxx xxxxx004",
                     "ProductCategory": "TRANS_AND_SAVINGS_ACCOUNTS",
                     "ProductName": "Everyday Savings",
+                    "Balance": {
+                        "BalanceId": "BID1000004",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-115",
@@ -1213,6 +1386,15 @@
                     "MaskedName": "xxx-xxx xxxxx005",
                     "ProductCategory": "TRANS_AND_SAVINGS_ACCOUNTS",
                     "ProductName": "Everyday Savings",
+                    "Balance": {
+                        "BalanceId": "BID1000005",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-116",
@@ -1243,6 +1425,15 @@
                     "MaskedName": "xxx-xxx xxxxx006",
                     "ProductCategory": "TRANS_AND_SAVINGS_ACCOUNTS",
                     "ProductName": "Everyday Savings",
+                    "Balance": {
+                        "BalanceId": "BID1000006",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-117",
@@ -1273,6 +1464,15 @@
                     "MaskedName": "xxx-xxx xxxxx007",
                     "ProductCategory": "TRANS_AND_SAVINGS_ACCOUNTS",
                     "ProductName": "Everyday Savings",
+                    "Balance": {
+                        "BalanceId": "BID1000007",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-118",
@@ -1303,6 +1503,15 @@
                     "MaskedName": "xxx-xxx xxxxx008",
                     "ProductCategory": "TRANS_AND_SAVINGS_ACCOUNTS",
                     "ProductName": "Everyday Savings",
+                    "Balance": {
+                        "BalanceId": "BID1000008",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-119",
@@ -1333,6 +1542,15 @@
                     "MaskedName": "xxx-xxx xxxxx009",
                     "ProductCategory": "TRANS_AND_SAVINGS_ACCOUNTS",
                     "ProductName": "Everyday Savings",
+                    "Balance": {
+                        "BalanceId": "BID1000009",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-120",
@@ -1363,6 +1581,15 @@
                     "MaskedName": "xxx-xxx xxxxx010",
                     "ProductCategory": "TRANS_AND_SAVINGS_ACCOUNTS",
                     "ProductName": "Everyday Savings",
+                    "Balance": {
+                        "BalanceId": "BID1000010",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-121",
@@ -1393,6 +1620,15 @@
                     "MaskedName": "xxx-xxx xxxxx001",
                     "ProductCategory": "TERM_DEPOSITS",
                     "ProductName": "Everyday Term Deposit",
+                    "Balance": {
+                        "BalanceId": "BID2000001",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-122",
@@ -1423,6 +1659,15 @@
                     "MaskedName": "xxx-xxx xxxxx002",
                     "ProductCategory": "TERM_DEPOSITS",
                     "ProductName": "Everyday Term Deposit",
+                    "Balance": {
+                        "BalanceId": "BID2000002",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-123",
@@ -1453,6 +1698,15 @@
                     "MaskedName": "xxx-xxx xxxxx003",
                     "ProductCategory": "TERM_DEPOSITS",
                     "ProductName": "Everyday Term Deposit",
+                    "Balance": {
+                        "BalanceId": "BID2000003",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-124",
@@ -1483,6 +1737,15 @@
                     "MaskedName": "xxx-xxx xxxxx004",
                     "ProductCategory": "TERM_DEPOSITS",
                     "ProductName": "Everyday Term Deposit",
+                    "Balance": {
+                        "BalanceId": "BID2000004",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-125",
@@ -1513,6 +1776,15 @@
                     "MaskedName": "xxx-xxx xxxxx005",
                     "ProductCategory": "TERM_DEPOSITS",
                     "ProductName": "Everyday Term Deposit",
+                    "Balance": {
+                        "BalanceId": "BID2000005",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-126",
@@ -1543,6 +1815,15 @@
                     "MaskedName": "xxx-xxx xxxxx006",
                     "ProductCategory": "TERM_DEPOSITS",
                     "ProductName": "Everyday Term Deposit",
+                    "Balance": {
+                        "BalanceId": "BID2000006",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-127",
@@ -1573,6 +1854,15 @@
                     "MaskedName": "xxx-xxx xxxxx007",
                     "ProductCategory": "TERM_DEPOSITS",
                     "ProductName": "Everyday Term Deposit",
+                    "Balance": {
+                        "BalanceId": "BID2000007",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-128",
@@ -1603,6 +1893,15 @@
                     "MaskedName": "xxx-xxx xxxxx008",
                     "ProductCategory": "TERM_DEPOSITS",
                     "ProductName": "Everyday Term Deposit",
+                    "Balance": {
+                        "BalanceId": "BID2000008",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-129",
@@ -1633,6 +1932,15 @@
                     "MaskedName": "xxx-xxx xxxxx009",
                     "ProductCategory": "TERM_DEPOSITS",
                     "ProductName": "Everyday Term Deposit",
+                    "Balance": {
+                        "BalanceId": "BID2000009",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-130",
@@ -1663,6 +1971,15 @@
                     "MaskedName": "xxx-xxx xxxxx010",
                     "ProductCategory": "TERM_DEPOSITS",
                     "ProductName": "Everyday Term Deposit",
+                    "Balance": {
+                        "BalanceId": "BID2000010",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-131",
@@ -1711,6 +2028,15 @@
                     "MaskedName": "xxx-xxx xxxxx232",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID321562",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-132",
@@ -1759,6 +2085,15 @@
                     "MaskedName": "xxx-xxx xxxxx232",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID112324",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-133",
@@ -1789,6 +2124,15 @@
                     "MaskedName": "xxx-xxx xxxxx364",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID4023452",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-134",
@@ -1837,6 +2181,15 @@
                     "MaskedName": "xxx-xxx xxxxx157",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID2456654",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-135",
@@ -1885,6 +2238,15 @@
                     "MaskedName": "xxx-xxx xxxxx254",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID513452",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-136",
@@ -1933,6 +2295,15 @@
                     "MaskedName": "xxx-xxx xxxxx223",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID123955",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-137",
@@ -1981,6 +2352,15 @@
                     "MaskedName": "xxx-xxx xxxxx297",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Everyday Personal Loan",
+                    "Balance": {
+                        "BalanceId": "BID123935",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-138",
@@ -2029,6 +2409,15 @@
                     "MaskedName": "xxx-xxx xxxxx375",
                     "ProductCategory": "CRED_AND_CHRG_CARDS",
                     "ProductName": "Credit card",
+                    "Balance": {
+                        "BalanceId": "BID96565987",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-139",
@@ -2059,6 +2448,15 @@
                     "MaskedName": "xxx-xxx xxxxx123",
                     "ProductCategory": "PERS_LOANS",
                     "ProductName": "Personal loan account",
+                    "Balance": {
+                        "BalanceId": "BID1100002",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-140",
@@ -2089,6 +2487,15 @@
                     "MaskedName": "xxx-xxx xxxxx375",
                     "ProductCategory": "TRAVEL_CARDS",
                     "ProductName": "digital banking",
+                    "Balance": {
+                        "BalanceId": "BID96534987",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN11113",
@@ -2161,6 +2568,15 @@
                     "MaskedName": "xxx-xxx xxxxx422",
                     "ProductCategory": "BUSINESS_LOANS",
                     "ProductName": "Business Starter",
+                    "Balance": {
+                        "BalanceId": "BID54676423",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-141",
@@ -2216,6 +2632,15 @@
                     "MaskedName": "xxx-xxx xxxxx124",
                     "ProductCategory": "BUSINESS_LOANS",
                     "ProductName": "Business Starter",
+                    "Balance": {
+                        "BalanceId": "BID54676422",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-142",
@@ -2271,6 +2696,15 @@
                     "MaskedName": "xxx-xxx xxxxx422",
                     "ProductCategory": "BUSINESS_LOANS",
                     "ProductName": "Business Starter",
+                    "Balance": {
+                        "BalanceId": "BID95959332",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-143",
@@ -2350,6 +2784,15 @@
                     "MaskedName": "xxx-xxx xxxxx442",
                     "ProductCategory": "BUSINESS_LOANS",
                     "ProductName": "Business Starter",
+                    "Balance": {
+                        "BalanceId": "BID835672345",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-144",
@@ -2405,6 +2848,15 @@
                     "MaskedName": "xxx-xxx xxxxx112",
                     "ProductCategory": "BUSINESS_LOANS",
                     "ProductName": "Business Starter",
+                    "Balance": {
+                        "BalanceId": "BID85123425",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-145",
@@ -2460,6 +2912,15 @@
                     "MaskedName": "xxx-xxx xxxxx192",
                     "ProductCategory": "BUSINESS_LOANS",
                     "ProductName": "Business Starter",
+                    "Balance": {
+                        "BalanceId": "BID8123415",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-146",
@@ -2515,6 +2976,15 @@
                     "MaskedName": "xxx-xxx xxxxx132",
                     "ProductCategory": "BUSINESS_LOANS",
                     "ProductName": "Business Starter",
+                    "Balance": {
+                        "BalanceId": "BID4123455",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-147",
@@ -2570,6 +3040,15 @@
                     "MaskedName": "xxx-xxx xxxxx132",
                     "ProductCategory": "BUSINESS_LOANS",
                     "ProductName": "Business Starter",
+                    "Balance": {
+                        "BalanceId": "BID8982345",
+                        "CurrentBalance": 13000.0,
+                        "AvailableBalance": 1300.0,
+                        "CreditLimit": 130.0,
+                        "AmortisedLimit": 13.0,
+                        "Currency": "AUD",
+                        "Purses" : []
+                    },
                     "Transactions": [
                         {
                             "TransactionId": "TRN-ID-148",

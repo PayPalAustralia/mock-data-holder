@@ -58,6 +58,21 @@ namespace CDR.DataHolder.Resource.API.Business
 				.ForPath(dest => dest.Data.Accounts, source => source.MapFrom(source => source.Data))
 				.ForMember(dest => dest.Meta, source => source.MapFrom(source => source))
 				.ReverseMap();
+
+			CreateMap<BalancePurse, BankingBalancePurse>()
+				.ForMember(d => d.Amount, s => s.MapFrom(src => src.Amount.ToString("F2")))
+				.ReverseMap();
+
+			CreateMap<Balance, BankingBalance>()
+				.ForMember(d => d.CurrentBalance, s => s.MapFrom(src => src.CurrentBalance.ToString("F2")))
+				.ForMember(d => d.AvailableBalance, s => s.MapFrom(src => src.AvailableBalance.ToString("F2")))
+				.ForMember(d => d.CreditLimit, s => s.MapFrom(src => src.CreditLimit.ToString("F2")))
+				.ForMember(d => d.AmortisedLimit, s => s.MapFrom(src => src.AmortisedLimit.ToString("F2")))
+				.ReverseMap();
+
+			CreateMap<Balance, ResponseBankingAccountsBalanceById>()
+				.ForMember(dest => dest.Data, source => source.MapFrom(source => source))
+				.ReverseMap();
 		}
 	}
 }

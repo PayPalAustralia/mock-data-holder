@@ -1,9 +1,7 @@
 ﻿using System;
 using CDR.DataHolder.Repository.Entities;
-using CDR.DataHolder.Repository.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-//using Microsoft.Extensions.Configuration;
 
 namespace CDR.DataHolder.Repository.Infrastructure
 {
@@ -22,6 +20,8 @@ namespace CDR.DataHolder.Repository.Infrastructure
 		public DbSet<Customer> Customers { get; set; }
 		public DbSet<Account> Accounts { get; set; }
 		public DbSet<Transaction> Transactions { get; set; }
+		public DbSet<Balance> Balances { get; set; }
+		public DbSet<BalancePurse> BalancePurses { get; set; }
 		public DbSet<Organisation> Organisations { get; set; }
 
 		public DbSet<LegalEntity> LegalEntities { get; set; }
@@ -49,7 +49,7 @@ namespace CDR.DataHolder.Repository.Infrastructure
                 .HasOne(b => b.Customer)
                 .WithOne(e => e.Organisation)
                 .OnDelete(DeleteBehavior.Cascade);
-
+				
 			modelBuilder.Entity<Transaction>()
 				.Property(x => x.Amount)
 				.IsRequired()

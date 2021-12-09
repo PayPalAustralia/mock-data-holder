@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using CDR.DataHolder.Repository.Entities;
 using DomainEntities = CDR.DataHolder.Domain.Entities;
-using DomainValueObjects = CDR.DataHolder.Domain.ValueObjects;
+
 namespace CDR.DataHolder.Repository.Infrastructure
 {
 	public class MappingProfile : Profile
@@ -9,6 +9,12 @@ namespace CDR.DataHolder.Repository.Infrastructure
 		public MappingProfile()
 		{
 			CreateMap<Transaction, DomainEntities.AccountTransaction>()
+				.ReverseMap();
+
+			CreateMap<Balance, DomainEntities.Balance>()
+				.ReverseMap();
+
+			CreateMap<BalancePurse, DomainEntities.BalancePurse>()
 				.ReverseMap();
 
 			CreateMap<Account, DomainEntities.Account>()

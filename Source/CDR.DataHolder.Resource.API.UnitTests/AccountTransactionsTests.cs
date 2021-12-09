@@ -37,6 +37,7 @@ namespace CDR.DataHolder.Resource.API.UnitTests
             var resourceRepository = _serviceProvider.GetRequiredService<IResourceRepository>();
             var statusRepository = _serviceProvider.GetRequiredService<IStatusRepository>();
             var transactionsService = _serviceProvider.GetRequiredService<ITransactionsService>();
+            var balancesService = _serviceProvider.GetRequiredService<IBalancesService>();
             var idPermanenceManager = _serviceProvider.GetRequiredService<IIdPermanenceManager>();
             var loggerFactory = _serviceProvider.GetRequiredService<ILoggerFactory>();
             var logger = loggerFactory.CreateLogger<ResourceController>();
@@ -81,7 +82,7 @@ namespace CDR.DataHolder.Resource.API.UnitTests
                 HttpContext = httpContext
             };
 
-            var controller = new ResourceController(resourceRepository, statusRepository, null, logger, transactionsService, idPermanenceManager);
+            var controller = new ResourceController(resourceRepository, statusRepository, null, logger, transactionsService, balancesService, idPermanenceManager);
             controller.ControllerContext = controllerContext;
             controller.Url = mockUrlHelper.Object;
 
@@ -112,6 +113,7 @@ namespace CDR.DataHolder.Resource.API.UnitTests
             var resourceRepository = _serviceProvider.GetRequiredService<IResourceRepository>();
             var statusRepository = _serviceProvider.GetRequiredService<IStatusRepository>();
             var transactionsService = _serviceProvider.GetRequiredService<ITransactionsService>();
+            var balancesService = _serviceProvider.GetRequiredService<IBalancesService>();
             var idPermanenceManager = _serviceProvider.GetRequiredService<IIdPermanenceManager>();
             var loggerFactory = _serviceProvider.GetRequiredService<ILoggerFactory>();
             var logger = loggerFactory.CreateLogger<ResourceController>();
@@ -156,7 +158,7 @@ namespace CDR.DataHolder.Resource.API.UnitTests
                 HttpContext = httpContext
             };
 
-            var controller = new ResourceController(resourceRepository, statusRepository, null, logger, transactionsService, idPermanenceManager);
+            var controller = new ResourceController(resourceRepository, statusRepository, null, logger, transactionsService, balancesService, idPermanenceManager);
             controller.ControllerContext = controllerContext;
             controller.Url = mockUrlHelper.Object;
 

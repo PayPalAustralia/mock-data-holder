@@ -5,6 +5,7 @@
         GetCustomersApi,
         GetAccountsApi,
         GetTransactionsApi,
+        GetAccountBalanceApi,
         DynamicClientRegistration
     }
 }

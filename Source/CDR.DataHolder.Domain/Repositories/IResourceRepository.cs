@@ -13,5 +13,6 @@ namespace CDR.DataHolder.Domain.Repositories
 		Task<Page<Account[]>> GetAllAccounts(AccountFilter filer, int page, int pageSize);
 		Task<Account[]> GetAllAccountsByCustomerIdForConsent(Guid customerId);
 		Task<Page<AccountTransaction[]>> GetAccountTransactions(AccountTransactionsFilter transactionsFilter, int page, int pageSize);
+		Task<Balance> GetAccountBalanceByAccountId(string accountId, Guid customerId);
 	}
 }

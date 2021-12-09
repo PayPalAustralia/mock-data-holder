@@ -190,5 +190,16 @@ namespace CDR.DataHolder.Repository
 
             return _mapper.Map<Account[]>(allAccounts);
         }
+
+		public async Task<Balance> GetAccountBalanceByAccountId(string accountId, Guid customerId)
+		{
+			var balance = await _dataHolderDatabaseContext.Balances.Include(x => x.Purses).Include(x => x.Account)
+				.ThenInclude(x => x.Customer).AsNoTracking()
+				.Where(t => t.AccountId == accountId && t.Account.CustomerId == customerId)
+				.FirstOrDefaultAsync();
+
+			return _mapper.Map<Balance>(balance);
+		}
+
     }
 }

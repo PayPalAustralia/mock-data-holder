@@ -47,6 +47,7 @@ namespace CDR.DataHolder.Resource.API.UnitTests.Fixtures
             services.AddScoped<IResourceRepository, ResourceRepository>();
             services.AddScoped<IStatusRepository, StatusRepository>();
             services.AddScoped<ITransactionsService, TransactionsService>();
+            services.AddScoped<IBalancesService, BalancesService>();
             services.AddSingleton<IIdPermanenceManager>(x => new IdPermanenceManager(configuration));
 
             this.ServiceProvider = services.BuildServiceProvider();

@@ -46,6 +46,7 @@ namespace CDR.DataHolder.Resource.API
             services.AddScoped<IResourceRepository, ResourceRepository>();
             services.AddScoped<IStatusRepository, StatusRepository>();
             services.AddScoped<ITransactionsService, TransactionsService>();
+            services.AddScoped<IBalancesService, BalancesService>();
             services.AddScoped<ResourceAuthoriseErrorHandlingMiddleware>();
             services.AddSingleton<IIdPermanenceManager, IdPermanenceManager>();
 
@@ -139,6 +140,13 @@ namespace CDR.DataHolder.Resource.API
                 options.AddPolicy(AuthorisationPolicy.GetTransactionsApi.ToString(), policy =>
                 {
                     policy.Requirements.Add(new ScopeRequirement("bank:transactions:read", identityServerIssuer));
+                    policy.Requirements.Add(new MtlsRequirement());
+                    policy.Requirements.Add(new AccessTokenRequirement());
+                });
+
+                options.AddPolicy(AuthorisationPolicy.GetAccountBalanceApi.ToString(), policy =>
+                {
+                    policy.Requirements.Add(new ScopeRequirement("bank:accounts.basic:read", identityServerIssuer));
                     policy.Requirements.Add(new MtlsRequirement());
                     policy.Requirements.Add(new AccessTokenRequirement());
                 });

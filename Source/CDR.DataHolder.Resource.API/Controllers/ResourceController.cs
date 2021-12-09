@@ -29,6 +29,7 @@ namespace CDR.DataHolder.Resource.API.Controllers
 		private readonly IMapper _mapper;
 		private readonly ILogger<ResourceController> _logger;
 		private readonly ITransactionsService _transactionsService;
+		private readonly IBalancesService _balancesService;
 		private readonly IIdPermanenceManager _idPermanenceManager;
 
 		public ResourceController(IResourceRepository resourceRepository,
@@ -36,6 +37,7 @@ namespace CDR.DataHolder.Resource.API.Controllers
 									IMapper mapper,
 									ILogger<ResourceController> logger,
 									ITransactionsService transactionsService,
+									IBalancesService balancesService,
 									IIdPermanenceManager idPermanenceManager)
 		{
 			_resourceRepository = resourceRepository;
@@ -43,6 +45,7 @@ namespace CDR.DataHolder.Resource.API.Controllers
 			_mapper = mapper;
 			_logger = logger;
 			_transactionsService = transactionsService;
+			_balancesService = balancesService;
 			_idPermanenceManager = idPermanenceManager;
 		}
 
@@ -218,6 +221,77 @@ namespace CDR.DataHolder.Resource.API.Controllers
 
 			// Set pagination meta data
 			response.Links = this.GetLinks(nameof(GetTransactions), page, response.Meta.TotalPages.GetValueOrDefault(), pageSize);
+
+			return new OkObjectResult(await Task.FromResult(response));
+		}
+
+		[PolicyAuthorize(AuthorisationPolicy.GetAccountBalanceApi)]
+		[HttpGet("v1/banking/accounts/{accountId}/balance", Name = nameof(GetAccountBalance))]
+		[CheckScope("bank:accounts.basic:read")]
+		[CheckVersion(1, 1)]
+		[CheckAuthDate]
+		[ApiVersion("1")]
+		public async Task<IActionResult> GetAccountBalance([FromQuery] RequestAccountTransactions request)
+		{
+			_logger.LogInformation($"Request received to {nameof(ResourceController)}.{nameof(GetAccountBalance)}");
+
+			// Each customer id is different for each ADR based on PPID.
+			// Therefore we need to look up the CustomerClient table to find the actual customer id.
+			// This can be done once we have a client id (Registration) and a valid access token.
+			request.CustomerId = GetCustomerId(this.User);
+			if (request.CustomerId == Guid.Empty)
+			{
+				return new BadRequestObjectResult(new ResponseErrorList(Error.UnknownError()));
+			}
+
+			// Check the status of the data recipient.
+			var statusErrors = await ValidateDataRecipientStatus();
+			if (statusErrors.HasErrors())
+			{
+				return new DataHolderForbidResult(statusErrors);
+			}
+
+			var softwareProductId = this.User.FindFirst(Constants.TokenClaimTypes.SoftwareId)?.Value;
+
+			// Decrypt the incoming account id (ID Permanence rules).
+			var idParameters = new IdPermanenceParameters
+			{
+				SoftwareProductId = softwareProductId,
+				CustomerId = request.CustomerId.ToString(),
+			};
+			
+			request.AccountId = DecryptAccountId(request.AccountId, idParameters);
+
+			if (string.IsNullOrEmpty(request.AccountId))
+			{
+				_logger.LogError("Account Id could not be retrived from request.");
+				return new NotFoundObjectResult(new ResponseErrorList(Error.NotFound()));
+			}
+			else
+			{
+				if (!(await _resourceRepository.CanAccessAccount(request.AccountId, request.CustomerId)))
+				{
+					// A valid consent exists with bank:transactions:read scope but this Account Id could not be found for the supplied Customer Id.
+					// This scenario will take precedence
+					_logger.LogInformation($"Customer does not have access to this Account Id. Customer Id: {request.CustomerId}, Account Id: {request.AccountId}");
+					return new NotFoundObjectResult(new ResponseErrorList(Error.NotFound()));
+				}
+
+				if (!GetAccountIds(User).Contains(request.AccountId))
+				{
+					// A valid consent exists with bank:transactions:read scope and the Account Id can be found for the supplied customer
+					// but this Account Id is not in the list of consented Account Ids
+					_logger.LogInformation($"Consent has not been granted for this Account Id: {request.AccountId}");
+					return new NotFoundObjectResult(new ResponseErrorList(Error.ConsentNotFound()));
+				}
+			}
+
+			var response = await _balancesService.GetAccountBalance(request.AccountId, request.CustomerId);
+
+			response.Data.AccountId = _idPermanenceManager.EncryptId(response.Data.AccountId, idParameters);
+
+			// Set pagination meta data
+			response.Links = this.GetLinks(nameof(GetAccountBalance));
 
 			return new OkObjectResult(await Task.FromResult(response));
 		}

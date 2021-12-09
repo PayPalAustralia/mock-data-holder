@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CDR.DataHolder.Domain.ValueObjects;
 
 namespace CDR.DataHolder.Repository.Entities
 {
@@ -35,6 +31,8 @@ namespace CDR.DataHolder.Repository.Entities
 		public string ProductName { get; set; }
 
 		public virtual ICollection<Transaction> Transactions { get; set; }
+
+		public virtual Balance Balance { get; set; }
 
 	}
 }
