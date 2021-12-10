@@ -222,6 +222,76 @@ namespace CDR.DataHolder.Resource.API.Controllers
 			return new OkObjectResult(await Task.FromResult(response));
 		}
 
+		[PolicyAuthorize(AuthorisationPolicy.GetTransactionsApi)]
+		[HttpGet("v1/banking/accounts/{accountId}/transactions/{transactionId}", Name = nameof(GetTransactionDetail))]
+		[CheckScope("bank:transactions:read")]
+		[CheckVersion(1, 1)]
+		[CheckAuthDate]
+		[ApiVersion("1")]
+		public async Task<IActionResult> GetTransactionDetail([FromQuery] RequestAccountTransaction request)
+		{
+			_logger.LogInformation($"Request received to {nameof(ResourceController)}.{nameof(GetTransactions)}");
+
+			// Each customer id is different for each ADR based on PPID.
+			// Therefore we need to look up the CustomerClient table to find the actual customer id.
+			// This can be done once we have a client id (Registration) and a valid access token.
+			request.CustomerId = GetCustomerId(this.User);
+			if (request.CustomerId == Guid.Empty)
+			{
+				return new BadRequestObjectResult(new ResponseErrorList(Error.UnknownError()));
+			}
+
+			// Check the status of the data recipient.
+			var statusErrors = await ValidateDataRecipientStatus();
+			if (statusErrors.HasErrors())
+			{
+				return new DataHolderForbidResult(statusErrors);
+			}
+
+			var softwareProductId = this.User.FindFirst(Constants.TokenClaimTypes.SoftwareId)?.Value;
+
+			// Decrypt the incoming account id (ID Permanence rules).
+			var idParameters = new IdPermanenceParameters
+			{
+				SoftwareProductId = softwareProductId,
+				CustomerId = request.CustomerId.ToString(),
+			};
+			
+			request.AccountId = DecryptAccountId(request.AccountId, idParameters);
+			request.TransactionId = DecryptAccountId(request.TransactionId, idParameters);
+
+			if (string.IsNullOrEmpty(request.AccountId))
+			{
+				_logger.LogError("Account Id could not be retrived from request.");
+				return new NotFoundObjectResult(new ResponseErrorList(Error.NotFound()));
+			}
+			else
+			{
+				if (!(await _resourceRepository.CanAccessAccount(request.AccountId, request.CustomerId)))
+				{
+					// A valid consent exists with bank:transactions:read scope but this Account Id could not be found for the supplied Customer Id.
+					// This scenario will take precedence
+					_logger.LogInformation($"Customer does not have access to this Account Id. Customer Id: {request.CustomerId}, Account Id: {request.AccountId}");
+					return new NotFoundObjectResult(new ResponseErrorList(Error.NotFound()));
+				}
+
+				if (!GetAccountIds(User).Contains(request.AccountId))
+				{
+					_logger.LogInformation($"Data not found: {request.AccountId}, {request.TransactionId}");
+					return new NotFoundObjectResult(new ResponseErrorList(Error.NotFound()));
+				}
+			}
+
+			var response = await _transactionsService.GetAccountTransaction(request);
+			response.Data.TransactionId = _idPermanenceManager.EncryptId(response.Data.TransactionId, idParameters);
+			response.Data.AccountId = _idPermanenceManager.EncryptId(response.Data.AccountId, idParameters);
+
+			// Set pagination meta data
+			response.Links = this.GetLinks(nameof(GetTransactionDetail));
+
+			return new OkObjectResult(await Task.FromResult(response));
+		}
+
 		private string DecryptAccountId(string encryptedAccountId, IdPermanenceParameters idParameters)
 		{
 			string accountId = null;

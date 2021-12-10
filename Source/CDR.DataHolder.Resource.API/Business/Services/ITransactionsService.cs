@@ -7,5 +7,6 @@ namespace CDR.DataHolder.Resource.API.Business.Services
     public interface ITransactionsService
     {
         Task<ResponseAccountTransactions> GetAccountTransactions(RequestAccountTransactions request, int page, int pageSize);
+        Task<ResponseAccountTransaction> GetAccountTransaction(RequestAccountTransaction request);
     }
 }

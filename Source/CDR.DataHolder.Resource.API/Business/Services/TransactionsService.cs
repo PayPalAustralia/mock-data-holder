@@ -17,6 +17,13 @@ namespace CDR.DataHolder.Resource.API.Business.Services
             _mapper = mapper;
         }
 
+        public async Task<ResponseAccountTransaction> GetAccountTransaction(RequestAccountTransaction request)
+        {
+            var filters = _mapper.Map<AccountTransactionFilter>(request);
+            var results = await _resourceRepository.GetAccountTransaction(filters);
+            return _mapper.Map<ResponseAccountTransaction>(results);
+        }
+
         public async Task<ResponseAccountTransactions> GetAccountTransactions(RequestAccountTransactions request, int page, int pageSize)
         {
             var filters = _mapper.Map<AccountTransactionsFilter>(request);

@@ -195,6 +195,21 @@
             "UpstreamHttpMethod": [ "GET" ],
             "DangerousAcceptAnyServerCertificateValidator": true
         },
+        
+        // Get Transactions Detail
+        {
+            "DownstreamPathTemplate": "/cds-au/v1/{industry}/accounts/{accountId}/transactions/{transactionId}",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 8003
+                }
+            ],
+            "UpstreamPathTemplate": "/cds-au/v1/{industry}/accounts/{accountId}/transactions/{transactionId}",
+            "UpstreamHttpMethod": [ "GET" ],
+            "DangerousAcceptAnyServerCertificateValidator": true
+        },
 
         // Get Metrics
         {

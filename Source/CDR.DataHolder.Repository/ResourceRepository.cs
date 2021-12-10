@@ -190,5 +190,20 @@ namespace CDR.DataHolder.Repository
 
             return _mapper.Map<Account[]>(allAccounts);
         }
+
+		public async Task<AccountTransaction> GetAccountTransaction(AccountTransactionFilter transactionsFilter)
+        {
+			var result = new AccountTransaction();
+
+            IQueryable<Entities.Transaction> accountTransactionsQuery = _dataHolderDatabaseContext
+                            .Transactions.Include(x => x.Account).ThenInclude(x => x.Customer).AsNoTracking()
+                    .Where(t => t.AccountId == transactionsFilter.AccountId 
+								&& t.Account.CustomerId == transactionsFilter.CustomerId 
+								&& t.TransactionId == transactionsFilter.TransactionId
+					);
+
+            var transactions = await accountTransactionsQuery.FirstOrDefaultAsync();
+            return _mapper.Map<AccountTransaction>(transactions);
+        }
     }
 }

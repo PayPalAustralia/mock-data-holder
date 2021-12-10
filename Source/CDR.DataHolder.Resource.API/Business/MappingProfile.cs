@@ -11,6 +11,7 @@ namespace CDR.DataHolder.Resource.API.Business
 		public MappingProfile()
 		{
 			CreateMap<RequestAccountTransactions, AccountTransactionsFilter>();
+			CreateMap<RequestAccountTransaction, AccountTransactionFilter>();
 
 			CreateMap<AccountTransaction, AccountTransactionModel>()
 				.ForMember(d => d.Type, s => s.MapFrom(src => src.TransactionType))
@@ -21,7 +22,11 @@ namespace CDR.DataHolder.Resource.API.Business
 
 			CreateMap<Page<AccountTransaction[]>, ResponseAccountTransactions>()
 				.ForMember(d => d.Meta, s => s.MapFrom(src => new MetaPaginated { TotalRecords = src.TotalRecords, TotalPages = src.TotalPages }));
+			
+			CreateMap<AccountTransaction, ResponseAccountTransaction>()
+				.ForMember<AccountTransactionModel>(d => d.Data, s => s.MapFrom(src => src));
 
+			CreateMap<Repository.Entities.Transaction, AccountTransaction>();
 			CreateMap(typeof(Page<>), typeof(MetaPaginated))
 				.ReverseMap();
 
